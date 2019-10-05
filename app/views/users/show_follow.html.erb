@@ -1,0 +1,18 @@
+<%= provide(:title,@title) %>
+<div class="row">
+  <aside class="col-md-4">
+    <section>
+      <h1><%= @user.name %></h1>
+      <span><%= link_to "プロフィールを見る",@user %></span>
+      <span><b>Microposts:</b><%= @user.microposts.count %></span>
+    </section>
+
+    <section class="stats">
+      <%= render 'shared/stats' %>
+      <% if @users.any? %>
+      <%= render @users %>
+      <% end %>
+    </section>
+  </aside>
+
+</div>
